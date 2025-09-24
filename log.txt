@@ -1,0 +1,2 @@
+Hello 
+Your output stored in log.txt
