@@ -3,7 +3,7 @@ class Wage
 {
     public static void main(String[] args)
     {
-        int noOfWorkingHours=0,day=0,amount=0;
+        int noOfWorkingHours=0,day=0,amount=0,wage=0;
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the working hours and day");
         noOfWorkingHours=sc.nextInt();
@@ -17,6 +17,9 @@ class Wage
             case 7->800; 
             default->0;
         };
-        System.out.println("Wages is:"+(amount*noOfWorkingHours));
+        wage=(amount*noOfWorkingHours);
+        if(wage>2000)
+         wage+=wage*0.1;
+        System.out.println("Wages is:"+wage);
     }
 }
