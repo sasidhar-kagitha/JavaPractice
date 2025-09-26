@@ -80,12 +80,22 @@ public class Product{
         this.quantity_on_hand +=quantity;
         System.out.printf("Success fully Purchased %d quantites of %s",quantity,this.prod_name);
     }
+    public void purchase()
+    {
+        this.quantity_on_hand+=1;
+        System.out.printf("Success fully Purchased 1 quantites of %s",this.prod_name);
+
+    }
 
     public void sell(int noOfquantites)
     {
+        if(this.quantity_on_hand>=noOfquantites)
+        {
         this.quantity_on_hand-=noOfquantites;
         System.out.printf("Success fully Sold %d quantites of %s",noOfquantites,this.prod_name);
+        }
     }
+
 
     @Override
     public String toString()
