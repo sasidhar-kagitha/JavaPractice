@@ -52,4 +52,5 @@ public class Employee{
     {
         return "\nEmployee_id :"+getEmployeeId()+"\nEmployee_name :"+getEmployeeName()+"\nEmployee_salary :"+getSalary();
     }
+    
 }

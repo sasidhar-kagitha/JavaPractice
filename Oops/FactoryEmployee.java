@@ -39,11 +39,29 @@ public class FactoryEmployee extends Employee
         this.emp_boards=emp_boards;
     }
 
-    
+    @Override
     public String toString()
     {
         return super.toString()+
         "\nBus_No: "+getBusNo()+"\nBoard :"+getEmpBoards();
+    }
+
+    @Override 
+    public boolean equals(Object e)
+    {
+        if(this==e)
+            return true;
+        FactoryEmployee e1=(FactoryEmployee)e;
+        if(e1.bus_no==this.bus_no  && e1.emp_boards==this.emp_boards)
+         return true;
+
+        return false;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return bus_no;
     }
 
     //Testing the Factory Employee Class;
@@ -52,7 +70,9 @@ public class FactoryEmployee extends Employee
         FactoryEmployee emp1=new FactoryEmployee(101,"Sai",50000,2,"Madhurawada");
         System.out.println(emp1.toString());
 
-        FactoryEmployee emp2=new FactoryEmployee(102,"Rakesh",3,"Rushi Konda");
+        FactoryEmployee emp2=new FactoryEmployee(102,"Rakesh",2,"Madhurawada");
         System.out.println(emp2.toString());
+
+        System.out.println(emp1.equals(emp2)+" "+emp1.hashCode());
     }
 }
