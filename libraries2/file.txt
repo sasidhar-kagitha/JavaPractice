@@ -1,4 +1,1 @@
-Hi,
-Hello 
-Weclome to java program.
-It is java 19 version.
+HI, HELLO WECLOME TO JAVA PROGRAM.IT IS JAVA 19 VERSION.
